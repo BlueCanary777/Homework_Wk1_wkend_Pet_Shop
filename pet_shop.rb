@@ -53,14 +53,25 @@ end
 
 def remove_pet_by_name(shop, name)
 
-  pet_found = nil
+  # pet_found = nil
 
   for pet in shop[:pets]
      if (name == pet[:name])
-       shop[:pets].reject
-       pet_found = pet
+       shop[:pets].reject(pet)
+
      end
   end
-  return pet_found
+  return pet
 
 end
+
+# me =  {
+#      :twitter => "tgoncalves",
+#      :favourite_numbers => [14, 28],
+#      :home_town => "Morningside",
+#      :pets => {
+#        "tommy" => :cat
+#      }
+#    }
+#
+# users["Tony"] = me
