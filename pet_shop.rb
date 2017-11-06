@@ -50,3 +50,17 @@ def find_pet_by_name(shop, name)
   end
   return pet_found
 end
+
+def remove_pet_by_name(shop, name)
+
+  pet_found = nil
+
+  for pet in shop[:pets]
+     if (name == pet[:name])
+       shop[:pets].reject
+       pet_found = pet
+     end
+  end
+  return pet_found
+
+end
